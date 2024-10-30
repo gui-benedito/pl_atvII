@@ -1,0 +1,139 @@
+.header-btn, .btn-cadastrar, .btn-atualizar, .btn-cadastrar-venda {
+    background-color: transparent;
+    color: #4F8298;
+    border: 2px solid #4F8298;
+    border-radius: 8px;
+    width: 8em;
+    padding: 0 1em;
+    font-weight: 600;
+    transition: .3s;
+}
+.header-btn:hover, .btn-cadastrar:hover, .btn-atualizar:hover, .btn-cadastrar-venda:hover {
+    background-color: #4F8298;
+    color: aliceblue;
+    border: 2px solid #4F8298;
+}
+.btn-cadastrar-venda {
+    width: 10em;
+}
+.header {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.btn-filtro {
+    width: 100%;
+    display: flex;
+    column-gap: 1em;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.card-main {
+    margin-bottom: 1em;
+    border: 1px solid #4F8298 !important;
+}
+
+.card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-column {
+    flex: 1;
+    margin-right: 1em;
+}
+
+.card-column:last-child {
+    margin-right: 0;
+}
+
+.card-icons {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.card-infos {
+    margin-top: 2em;
+    display: flex;
+    column-gap: 4em;
+}
+.card-sub-infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.docs span {
+    margin-left: 1em;
+}
+
+.confirma-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lista-vazia {
+    width: 100%;
+    text-align: center;
+}
+.lista-vazia img{
+    width: 291px;
+    height: 178px;
+    margin-top: 5em;
+    border-radius: 8px;
+    opacity: 0.2;
+}
+
+.card-infos-pets{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.consumo-container {
+    margin-top: 1em;
+}
+
+.card-valor {
+    margin-top: 1em;
+}
+
+.tutor-select {
+    margin-bottom: 1em;
+}
+
+.header-btn-outros{
+    background-color: transparent;
+    color: #4F8298;
+    border: 2px solid #4F8298;
+    border-radius: 8px;
+    width: 10em;
+    height: 4em;
+    padding: 0 1em;
+    font-weight: 600;
+    transition: .3s;
+}
+.header-btn-outros:hover {
+    background-color: #4F8298;
+    color: aliceblue;
+    border: 2px solid #4F8298;
+}
+
+.headerOutros {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+.form-venda {
+    padding: 1em;
+}

@@ -1,0 +1,17 @@
+.nav-container {
+    background-color: #4F8298;
+    display: flex;
+    align-items: center;
+    justify-content: space-around !important; 
+    padding: .8em 0 !important;
+}
+
+.brand {
+    color: aliceblue !important;
+    font-size: 2em !important;
+    font-weight: 700 !important;
+}
+
+.navBtn {
+    width: 8em;
+}
