@@ -63,7 +63,7 @@ export default class MaisConsumidosValor extends Component<{}, ClienteSorted> {
 
         return (
             <>  
-                <div className="Card-container card-valor">
+                <div className="Card-container card-valor container-registro">
                     {cabecalho && <h3>{cabecalho}</h3>}
                     {clientesFiltered.length > 0 && (
                         clientesFiltered.map((c, index) => (

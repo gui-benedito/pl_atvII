@@ -54,19 +54,19 @@ export default class ClienteCard extends Component<Props, State> {
                     <Card.Body>
                     <div className="card-item">
                         <div className="card-column">
-                            <span><strong>Nome Social:</strong> {this.props.nomeSocial}</span>
+                            <span><strong>Nome Social:</strong></span><span> {this.props.nomeSocial}</span>
                         </div>
                         <div className="card-column">
                             {this.props.telefones && Array.isArray(this.props.telefones) ? (
                                 this.props.telefones.map((t, idx) => (
-                                    <span key={idx}><strong>Telefone:</strong> ({t.ddd}) {t.numero}</span>
+                                    <><span key={idx}><strong>Telefone:</strong> </span><span>({t.ddd}) {t.numero}</span></>
                                 ))
                             ) : (
                                 <p><strong>Telefone:</strong> N/A</p>
                             )}
                         </div>
                         <div className="card-column">
-                            <span><strong>Email:</strong> {this.props.email}</span>
+                            <span><strong>Email:</strong></span><span> {this.props.email}</span>
                         </div>
                         <div className="card-icons">
                             {this.state.show ? 

@@ -79,7 +79,7 @@ export default class MaisConsumidosServicoEProduto extends Component<{}, State> 
                     <button onClick={this.produtosMaisConsumidos} className="header-btn">Produto</button>
                     <button onClick={this.servicosMaisConsumidos} className="header-btn">Serviço</button>
                 </div>
-                <div className="Card-container">
+                <div className="Card-container container-registro">
                     {cabecalho && <h3>{cabecalho}</h3>}
                     {filtered.length > 0 && (
                         filtered.map((c, index) => (

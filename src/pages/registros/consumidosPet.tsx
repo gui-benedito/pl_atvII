@@ -130,7 +130,7 @@ export default class ConsumidosPorPet extends Component<{}, State> {
         const { filtered, cabecalho, tipo, raca, racasDisponiveis } = this.state;
 
         return (
-            <div className="container-fluid">
+            <div className="container-fluid valor-filtro">
                 <h2>Filtrar por Tipo e/ou Raça de Pet</h2>
                 <Row className="mb-3">
                     <Col>
@@ -153,7 +153,7 @@ export default class ConsumidosPorPet extends Component<{}, State> {
                     <button onClick={this.filtrarProdutosConsumidos} className="header-btn">Filtrar Produtos</button>
                     <button onClick={this.filtrarServicosConsumidos} className="header-btn">Filtrar Serviços</button>
                 </div>
-                <div className="Card-container">
+                <div className="Card-container container-registro">
                     {cabecalho && <h3>{cabecalho}</h3>}
                     {filtered.length > 0 && (
                         filtered.map((c, index) => (

@@ -78,7 +78,7 @@ export default class MaisConsumidos extends Component<{}, ClienteSorted> {
                     <button onClick={this.dezProdutosMaisConsumidos} className="header-btn">Produto</button>
                     <button onClick={this.dezServicosMaisConsumidos} className="header-btn">Serviço</button>
                 </div>
-                <div className="Card-container">
+                <div className="Card-container container-registro">
                     {cabecalho && (
                         <h3>{cabecalho}</h3>
                     )}
