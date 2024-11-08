@@ -1,6 +1,6 @@
 # pl_atvII
 
-Repositório criado para atividade I de técnicas de programação.
+Repositório criado para atividade II de técnicas de programação.
 
 <h1> Instalação </h1>
   Procedimentos para rodar a aplicação
