@@ -55,14 +55,14 @@ export default class ListaServico extends Component<{}, {servicos: Servico[], se
                     <a href="/servico/cadastro" key="cadastrar"><button  className="header-btn">Cadastrar</button></a>
                 </div>
                 <div className="Card-container">
-                    {servicos.length <= 0 ?
                     <>
-                        <div className="lista-vazia">
-                            <img src={imgSemServio}/>
-                        </div>
-                    </> 
-                    : 
-                    <>
+                        <ServicoCard 
+                            key={0}
+                            id={0} 
+                            nome={'Tosa'} 
+                            valor={55} 
+                            onExcluir={() => this.openModalConfirmaExcluir(0)}                          
+                        />
                         {servicos.map((servico) => (
                             <ServicoCard 
                                 key={servico.id}
@@ -73,7 +73,6 @@ export default class ListaServico extends Component<{}, {servicos: Servico[], se
                             />
                         ))}
                     </>
-                    }
                     <Modal
                         isOpen={openModalExcluir}
                         label="Confirma a exclusão do serviço?"

@@ -80,27 +80,30 @@ export default class ListaPet extends Component<{}, { pets: PetType[], openModal
                     <a href="/pet" key="lista"><button  className="header-btn">Lista</button></a>
                     <a href="/pet/cadastro" key="cadastrar"><button  className="header-btn">Cadastrar</button></a>
                 </div>
-                {pets.length <= 0 ? 
-                    <div className="lista-vazia">
-                        <img src={imgSemCliente}/>
-                    </div>
-                :
-                    <>
-                        {pets.map((p) => (
-                            <PetCard 
-                                key={`${p.tutorId}-${p.nome}`}
-                                nome={p.nome} 
-                                genero={p.genero} 
-                                tipo={p.tipo} 
-                                raca={p.raca} 
-                                tutorId={p.tutorId} 
-                                tutorNome={p.tutorNome}
-                                onExcluir={() => this.openModalConfirmaExcluir(p.tutorId, p.nome)} 
-                            />
-                        ))}
-                    </>
-                }
-
+                <>
+                    <PetCard 
+                        key={`${0}`}
+                        nome={'Bidu'} 
+                        genero={'Macho'} 
+                        tipo={'Cachorro'} 
+                        raca={'SRD'} 
+                        tutorId={1} 
+                        tutorNome={'Guilherme'}
+                        onExcluir={() => this.openModalConfirmaExcluir(1, '')} 
+                    />
+                    {pets.map((p) => (
+                        <PetCard 
+                            key={`${p.tutorId}-${p.nome}`}
+                            nome={p.nome} 
+                            genero={p.genero} 
+                            tipo={p.tipo} 
+                            raca={p.raca} 
+                            tutorId={p.tutorId} 
+                            tutorNome={p.tutorNome}
+                            onExcluir={() => this.openModalConfirmaExcluir(p.tutorId, p.nome)} 
+                        />
+                    ))}
+                </>
                 <Modal
                     isOpen={openModalExcluir}
                     label="Confirma a exclusão do pet?"

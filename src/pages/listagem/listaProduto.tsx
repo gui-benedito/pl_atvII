@@ -55,26 +55,26 @@ export default class ListaProduto extends Component<{}, {produtos: Produto[], pr
                     <a href="/produto/cadastro" key="cadastrar"><button  className="header-btn">Cadastrar</button></a>
                 </div>
                 <div className="Card-container">
-                    {produtos.length <= 0 ?
-                        <>
-                            <div className="lista-vazia">
-                                <img src={imgSemProduto}/>
-                            </div>
-                        </>
-                        :
-                        <>
-                            {produtos.map((produto) => (
-                                <ProdutoCard 
-                                    key={produto.id}
-                                    id={produto.id} 
-                                    nome={produto.nome} 
-                                    valor={produto.valor} 
-                                    quantidade={produto.quantidade} 
-                                    onExcluir={() => this.openModalConfirmaExcluir(produto.id)}                          
-                                />
-                            ))}
-                        </>
-                    }
+                    <>
+                        <ProdutoCard 
+                            key={0}
+                            id={0} 
+                            nome={'Ração'} 
+                            valor={80} 
+                            quantidade={200} 
+                            onExcluir={() => this.openModalConfirmaExcluir(0)}                          
+                        />
+                        {produtos.map((produto) => (
+                            <ProdutoCard 
+                                key={produto.id}
+                                id={produto.id} 
+                                nome={produto.nome} 
+                                valor={produto.valor} 
+                                quantidade={produto.quantidade} 
+                                onExcluir={() => this.openModalConfirmaExcluir(produto.id)}                          
+                            />
+                        ))}
+                    </>
                     <Modal
                         isOpen={openModalExcluir}
                         label="Confirma a exclusão do produto?"

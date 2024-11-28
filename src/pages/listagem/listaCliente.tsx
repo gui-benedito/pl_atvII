@@ -75,34 +75,49 @@ export default class ListaCliente extends Component<{}, { clientes: ClienteType[
                     <a href="/cliente/cadastro" key="cadastrar"><button  className="header-btn">Cadastrar</button></a>
                 </div>
                 <div className="Card-container">
-                    {clientes.length <= 0 ? 
-                        <div className="lista-vazia">
-                            <img src={imgSemCliente}/>
-                        </div>
-                        :
-                        <>
-                            {clientes.map((cliente) => (
-                                <ClienteCard
-                                    key={cliente.id}
-                                    id={cliente.id}
-                                    nome={cliente.nome}
-                                    nomeSocial={cliente.nomeSocial}
-                                    cpf={{
-                                        valor: cliente.cpf.valor,
-                                        dataEmissao: cliente.cpf.dataEmissao,
-                                    }}
-                                    rg={{
-                                        valor: cliente.rg.valor,
-                                        dataEmissao: cliente.rg.dataEmissao,
-                                    }}
-                                    telefones={cliente.telefones}
-                                    email={cliente.email}
-                                    onExcluir={() => this.openModalConfirmaExcluir(cliente.id)} 
-                                    pets={cliente.pets}
-                                />
-                            ))}
-                        </>
-                    }
+                    <ClienteCard
+                        key={0}
+                        id={0}
+                        nome={'Guilherme dos Santos Benedito'}
+                        nomeSocial={'Guilherme'}
+                        cpf={{
+                            valor: '440.605.828-16',
+                            dataEmissao: '10/01/2000',
+                        }}
+                        rg={{
+                            valor: '50.152.529-4',
+                            dataEmissao: '10/01/2000',
+                        }}
+                        telefones={
+                            [{
+                                ddd: '12',
+                                numero: '991810093'
+                            }]
+                        }
+                        email={'guisantos.benedito@gmail.com'}
+                        onExcluir={() => this.openModalConfirmaExcluir(0)} 
+                        pets={[]}
+                    />
+                    {clientes.map((cliente) => (
+                        <ClienteCard
+                            key={cliente.id}
+                            id={cliente.id}
+                            nome={cliente.nome}
+                            nomeSocial={cliente.nomeSocial}
+                            cpf={{
+                                valor: cliente.cpf.valor,
+                                dataEmissao: cliente.cpf.dataEmissao,
+                            }}
+                            rg={{
+                                valor: cliente.rg.valor,
+                                dataEmissao: cliente.rg.dataEmissao,
+                            }}
+                            telefones={cliente.telefones}
+                            email={cliente.email}
+                            onExcluir={() => this.openModalConfirmaExcluir(cliente.id)} 
+                            pets={cliente.pets}
+                        />
+                    ))}
                 </div>
                 <Modal
                     isOpen={openModalExcluir}
